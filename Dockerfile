@@ -14,7 +14,7 @@ RUN npm install --production
 COPY . .
 
 # Expose the port your app runs on
-EXPOSE 9065
+EXPOSE 9075
 
 
 # Start the application
