@@ -71,10 +71,10 @@ app.post("/sendMail", async (req, res) => {
           </p>
           
           <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
-            <p style="font-size: 16px;">Best regards,</p>
-            <p style="font-size: 16px;">Vidhi Chakraborty</p>
-            <p style="font-size: 16px;">Customer Support Manager</p>
-            <p style="font-size: 16px; font-weight: 500; color: #2c3e50;">AndAI Platforms Pvt Ltd</p>
+             <p style="font-size: 16px; margin: 0;">Best regards,</p>
+<p style="font-size: 16px; margin: 0;">Vidhi Chakraborty</p>
+<p style="font-size: 16px; margin: 0;">Customer Support Manager</p>
+<p style="font-size: 16px; font-weight: 500; color: #2c3e50; margin: 0;">AndAI Platforms Pvt Ltd</p>
           </div>
         </div>
       </div>
