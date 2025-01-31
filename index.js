@@ -43,7 +43,7 @@ app.post("/sendMail", async (req, res) => {
           <img 
             src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2FnewAndai.jpg?alt=media&token=b92aa612-bf3a-4da5-a626-794649957d6c" 
             alt="Andai Logo" 
-            style="width: 180px; height: auto;" 
+            style="width: 70px; height: auto;" 
           />
         </div>
         
