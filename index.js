@@ -41,8 +41,8 @@ app.post("/sendMail", async (req, res) => {
     <!-- Header Banner -->
     <div style="background: linear-gradient(90deg, #2c3e50 0%, #3498db 100%); padding: 30px; text-align: center;">
       <img 
-        src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2FnewAndai.jpg?alt=media&token=b92aa612-bf3a-4da5-a626-794649957d6c" 
-        alt="Andai Logo" 
+               src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2Fpoorit.jpg?alt=media&token=651b6cff-d947-4e79-afb9-aa1c61bb7095" 
+        alt="Poorit Logo" 
         style="width: 80px; height: auto; border-radius: 50%; background: white; padding: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" 
         class="animate__animated animate__fadeIn"
       />
@@ -82,10 +82,10 @@ app.post("/sendMail", async (req, res) => {
       
       <!-- Signature Section -->
       <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
-        <p style="font-size: 16px; margin: 0; color: #555;">Best regards,</p>
-        <p style="font-size: 17px; margin: 5px 0; color: #2c3e50; font-weight: 500;">Vidhi Chakraborty</p>
-        <p style="font-size: 15px; margin: 0; color: #6c757d;">Customer Support Manager</p>
-        <p style="font-size: 15px; margin: 5px 0; color: #2c3e50; font-weight: 500;">AndAI Platforms Pvt Ltd</p>
+          <p style="font-size: 16px; margin: 0; color: #2c3e50;">Best regards,</p>
+                <p style="font-size: 16px; margin: 8px 0 0 0; color: #2c3e50; font-weight: 500;">Vidhi Chakraborty</p>
+                <p style="font-size: 14px; margin: 4px 0; color: #64748b;">Customer Support Manager</p>
+                <p style="font-size: 14px; margin: 4px 0; color: #2c3e50;">Poorit Technologies powered by AndAIPlatforms</p>
       </div>
     </div>
   </div>
