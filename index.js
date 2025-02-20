@@ -26,6 +26,7 @@ app.post("/sendMail", async (req, res) => {
   const mailOptions = {
     from: process.env.SMTP_EMAIL,
     to: email,
+    cc : process.env.SMTP_EMAIL,
     subject: "Interview Report",
     html: `
    <!DOCTYPE html>
