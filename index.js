@@ -30,66 +30,94 @@ app.post("/sendMail", async (req, res) => {
     subject: "Interview Report",
     html: `
    <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interview Completion - Your Score</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 </head>
-<body style="margin: 0; padding: 20px; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6;">
-  <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden;">
-    <!-- Header Banner -->
-    <div style="background: linear-gradient(90deg, #2c3e50 0%, #3498db 100%); padding: 30px; text-align: center;">
-      <img 
-               src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2Fpoorit.jpg?alt=media&token=651b6cff-d947-4e79-afb9-aa1c61bb7095" 
-        alt="Poorit Logo" 
-        style="width: 80px; height: auto; border-radius: 50%; background: white; padding: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" 
-        class="animate__animated animate__fadeIn"
-      />
-    </div>
-    
-    <div style="padding: 40px; color: #333333;">
-      <p style="font-size: 17px; margin-bottom: 20px;">Dear <strong style="color: #2c3e50; font-size: 18px;">${name}</strong>,</p>
-      
-      
-      <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-        We have evaluated your responses, and here is your interview score:
-      </p>
-      
-      <!-- Score Card -->
-      <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 12px; padding: 25px; text-align: center; margin: 30px 0;">
-        <div style="font-size: 20px; color: #6c757d; margin-bottom: 10px;">Your Score</div>
-        <div style="font-size: 48px; font-weight: bold; color: #2c3e50; margin: 10px 0;" class="animate__animated animate__fadeIn">
-          ${score}<span style="font-size: 32px; color: #6c757d;">/10</span>
-        </div>
-      </div>
+<body style="margin: 0; padding: 0; background-color: #f3f3f3; font-family: Arial, sans-serif;">
 
-      <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-        You can view your detailed interview report using the link below:
-      </p>
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" bgcolor="#f3f3f3">
+    <tr>
+      <td align="center" style="padding: 20px;">
+        
+        <!-- MAIN CONTAINER -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" bgcolor="#ffffff" style="width: 600px; max-width: 100%; box-shadow: 0px 2px 10px rgba(0,0,0,0.1); border: 1px solid #dddddd;">
+          
+          <!-- HEADER SECTION -->
+          <tr>
+            <td align="center" style="background-color: #2c3e50; padding: 30px;">
+              <img src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2Fpoorit.jpg?alt=media&token=651b6cff-d947-4e79-afb9-aa1c61bb7095" 
+                   alt="Poorit Logo" 
+                   width="80" 
+                   style="display: block; width: 80px; border-radius: 50%; background-color: #ffffff; padding: 10px; box-shadow: 0px 2px 5px rgba(0,0,0,0.1);" />
+            </td>
+          </tr>
+          
+          <!-- BODY SECTION -->
+          <tr>
+            <td align="left" style="padding: 40px; color: #333333;">
+              <p style="font-size: 17px; margin-bottom: 20px;">
+                Dear <strong style="color: #2c3e50; font-size: 18px;">${name}</strong>,
+              </p>
+              <p style="font-size: 16px; margin-bottom: 20px; color: #555;">
+                We have evaluated your responses, and here is your interview score:
+              </p>
 
-      <!-- Call to Action Button -->
-      <div style="text-align: center; margin: 30px 0;">
-        <a href="${downloadUrl}" target="_blank" style="display: inline-block; padding: 14px 28px; font-size: 16px; color: #ffffff; background: linear-gradient(90deg, #28a745 0%, #20c997 100%); text-decoration: none; border-radius: 8px; transition: transform 0.2s; box-shadow: 0 2px 10px rgba(40, 167, 69, 0.2);">
-          View Report
-        </a>
-      </div>
-      
-      
-      <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
-        If you have any questions, feel free to reach out.
-      </p>
-      
-      <!-- Signature Section -->
-      <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
-          <p style="font-size: 16px; margin: 0; color: #2c3e50;">Best regards,</p>
-                <p style="font-size: 16px; margin: 8px 0 0 0; color: #2c3e50; font-weight: 500;">Vidhi Chakraborty</p>
-                <p style="font-size: 14px; margin: 4px 0; color: #64748b;">Customer Support Manager</p>
-                <p style="font-size: 14px; margin: 4px 0; color: #2c3e50;">Poorit Technologies powered by AndAIPlatforms</p>
-      </div>
-    </div>
-  </div>
+              <!-- SCORE CARD -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#e9ecef" style="border-radius: 8px; padding: 20px; text-align: center;">
+                <tr>
+                  <td style="font-size: 20px; color: #6c757d; padding-bottom: 10px;">Your Score</td>
+                </tr>
+                <tr>
+                  <td style="font-size: 48px; font-weight: bold; color: #2c3e50;">
+                    ${score}<span style="font-size: 32px; color: #6c757d;">/10</span>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-size: 16px; margin-top: 25px; color: #555;">
+                You can view your detailed interview report using the link below:
+              </p>
+
+              <!-- BUTTON -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top: 20px;">
+                <tr>
+                  <td align="center" bgcolor="#28a745" style="border-radius: 8px;">
+                    <a href="${downloadUrl}" target="_blank" 
+                       style="display: inline-block; padding: 14px 28px; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 8px; background-color: #28a745;">
+                      View Report
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-size: 16px; margin-top: 25px; color: #555;">
+                If you have any questions, feel free to reach out.
+              </p>
+
+              <!-- SIGNATURE -->
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-top: 1px solid #dddddd; padding-top: 20px;">
+                <tr>
+                  <td>
+                    <p style="font-size: 16px; margin: 0; color: #2c3e50;">Best regards,</p>
+                    <p style="font-size: 16px; margin: 8px 0 0 0; color: #2c3e50; font-weight: 500;">Vidhi Chakraborty</p>
+                    <p style="font-size: 14px; margin: 4px 0; color: #64748b;">Customer Support Manager</p>
+                    <p style="font-size: 14px; margin: 4px 0; color: #2c3e50;">Poorit Technologies powered by AndAIPlatforms</p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+          
+        </table>
+        
+      </td>
+    </tr>
+  </table>
+
 </body>
 </html>
 
