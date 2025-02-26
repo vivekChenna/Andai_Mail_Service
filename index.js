@@ -48,8 +48,8 @@ app.post("/sendMail", async (req, res) => {
           <!-- HEADER SECTION -->
           <tr>
             <td align="center" style="background-color: #2c3e50; padding: 30px;">
-              <img src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2Fpoorit.jpg?alt=media&token=651b6cff-d947-4e79-afb9-aa1c61bb7095" 
-                   alt="Poorit Logo" 
+              <img src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2FnewAndai.jpg?alt=media&token=b92aa612-bf3a-4da5-a626-794649957d6c" 
+                   alt="Andai Logo" 
                    width="80" 
                    style="display: block; width: 80px; border-radius: 50%; background-color: #ffffff; padding: 10px; box-shadow: 0px 2px 5px rgba(0,0,0,0.1);" />
             </td>
@@ -102,9 +102,7 @@ app.post("/sendMail", async (req, res) => {
                 <tr>
                   <td>
                     <p style="font-size: 16px; margin: 0; color: #2c3e50;">Best regards,</p>
-                    <p style="font-size: 16px; margin: 8px 0 0 0; color: #2c3e50; font-weight: 500;">Vidhi Chakraborty</p>
-                    <p style="font-size: 14px; margin: 4px 0; color: #64748b;">Customer Support Manager</p>
-                    <p style="font-size: 14px; margin: 4px 0; color: #2c3e50;">Poorit Technologies powered by AndAIPlatforms</p>
+                    <p style="font-size: 14px; margin: 0; color: #2c3e50;">AndAI Platforms Pvt Ltd</p>
                   </td>
                 </tr>
               </table>
@@ -163,8 +161,8 @@ app.post("/interviewCompletion", async (req, res) => {
           <!-- HEADER SECTION -->
           <tr>
             <td align="center" style="background-color: #2c3e50; padding: 30px;">
-              <img src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2Fpoorit.jpg?alt=media&token=651b6cff-d947-4e79-afb9-aa1c61bb7095" 
-                   alt="Poorit Logo" 
+              <img src="https://firebasestorage.googleapis.com/v0/b/andai-admin-portal.appspot.com/o/images%2FnewAndai.jpg?alt=media&token=b92aa612-bf3a-4da5-a626-794649957d6c" 
+                   alt="Andai Logo" 
                    width="80" 
                    style="display: block; width: 80px; background-color: #ffffff; padding: 10px;" />
             </td>
@@ -193,9 +191,7 @@ app.post("/interviewCompletion", async (req, res) => {
                 <tr>
                   <td>
                     <p style="font-size: 16px; margin: 0; color: #2c3e50;">Best regards,</p>
-                    <p style="font-size: 16px; margin: 8px 0 0 0; color: #2c3e50; font-weight: 500;">Vidhi Chakraborty</p>
-                    <p style="font-size: 14px; margin: 4px 0; color: #64748b;">Customer Support Manager</p>
-                    <p style="font-size: 14px; margin: 4px 0; color: #2c3e50;">Poorit Technologies powered by AndAIPlatforms</p>
+                    <p style="font-size: 14px; margin: 4px 0; color: #2c3e50;">AndAI Platforms Pvt Ltd</p>
                   </td>
                 </tr>
               </table>
