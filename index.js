@@ -4,8 +4,6 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const { EmailClient } = require("@azure/communication-email");
 
-const connectionString = `endpoint=https://hr-bot.india.communication.azure.com/;accesskey=${process.env.AZURE_CONNECTION_STRING_END_POINT}`;
-const client = new EmailClient(connectionString);
 
 dotenv.config();
 
@@ -15,6 +13,8 @@ const PORT = process.env.PORT || 9065;
 app.use(cors());
 app.use(express.json());
 
+const client = new EmailClient(connectionString);
+const connectionString = `endpoint=https://hr-bot.india.communication.azure.com/;accesskey=${process.env.AZURE_CONNECTION_STRING_END_POINT}`;
 
 app.post("/sendMail", async (req, res) => {
   const { name, email, score, downloadUrl } = req.body;
