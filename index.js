@@ -16,6 +16,14 @@ app.use(express.json());
 const connectionString = `endpoint=https://hr-bot.india.communication.azure.com/;accesskey=${process.env.AZURE_CONNECTION_STRING_END_POINT}`;
 const client = new EmailClient(connectionString);
 
+function sanitizeName(name) {
+  return name
+    .normalize("NFD") // Normalize special characters
+    .replace(/[\u0300-\u036f]/g, "") // Remove accents
+    .replace(/[^\x00-\x7F]/g, ""); // Remove non-ASCII characters
+}
+
+
 app.post("/sendMail", async (req, res) => {
   const { name, email, score, downloadUrl } = req.body;
 
@@ -138,6 +146,8 @@ app.post("/sendMail", async (req, res) => {
 app.post("/interviewCompletion", async (req, res) => {
   const { email, name } = req.body;
 
+  const sanitizedUserName = sanitizeName(name);
+
   const mailOptions = {
     senderAddress: process.env.SMTP_EMAIL,
     content: {
@@ -173,7 +183,7 @@ app.post("/interviewCompletion", async (req, res) => {
         <tr>
           <td align="left" style="padding: 40px; color: #333;">
             
-            <p style="font-size: 17px; margin-bottom: 20px;">Dear <strong style="color: #2c3e50; font-size: 18px;">${name}</strong>,</p>
+            <p style="font-size: 17px; margin-bottom: 20px;">Dear <strong style="color: #2c3e50; font-size: 18px;">${sanitizedUserName}</strong>,</p>
 
             <p style="font-size: 16px; margin-bottom: 25px; color: #555;">
               Thank you for completing your interview with us. Your effort and time are greatly appreciated.
