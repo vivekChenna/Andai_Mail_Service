@@ -75,7 +75,7 @@ app.post("/sendMail", async (req, res) => {
                   </tr>
                   <tr>
                     <td style="font-size: 48px; font-weight: bold; color: #2c3e50;">
-                      ${score}<span style="font-size: 32px; color: #6c757d;">/10</span>
+                      ${score}<span style="font-size: 32px; color: #6c757d;"></span>
                     </td>
                   </tr>
                 </table>
