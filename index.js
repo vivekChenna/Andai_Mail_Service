@@ -4,7 +4,6 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const { EmailClient } = require("@azure/communication-email");
 
-
 dotenv.config();
 
 const app = express();
@@ -22,7 +21,6 @@ function sanitizeName(name) {
     .replace(/[\u0300-\u036f]/g, "") // Remove accents
     .replace(/[^\x00-\x7F]/g, ""); // Remove non-ASCII characters
 }
-
 
 app.post("/sendMail", async (req, res) => {
   const { name, email, score, downloadUrl } = req.body;
@@ -127,6 +125,7 @@ app.post("/sendMail", async (req, res) => {
     },
     recipients: {
       to: [{ address: email }],
+      cc: [{ address: process.env.SMTP_EMAIL }],
     },
   };
 
@@ -222,6 +221,7 @@ app.post("/interviewCompletion", async (req, res) => {
     },
     recipients: {
       to: [{ address: email }],
+      cc: [{ address: process.env.SMTP_EMAIL }],
     },
   };
 
